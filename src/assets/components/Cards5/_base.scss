@@ -1,0 +1,48 @@
+//  Core
+
+.card-body-avatar {
+  position: relative;
+  padding-top: calc(#{$card-spacer-x} + 60px);
+
+  & > .avatar-icon-wrapper {
+    margin: 0;
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: -60px;
+    z-index: 3;
+
+    .avatar-icon {
+      height: 100%;
+      width: 100%;
+      box-shadow: $box-shadow-layout-bottom;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+    }
+
+    &--sm {
+      height: 60px;
+      width: 60px;
+      top: -30px;
+    }
+  }
+
+  &.text-center {
+    & > .avatar-icon-wrapper {
+      left: 50%;
+      margin-left: -60px;
+
+      .avatar-icon {
+        margin: 0;
+      }
+
+      &--sm {
+        margin-left: -30px;
+      }
+    }
+  }
+}

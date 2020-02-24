@@ -1,0 +1,63 @@
+//  Core
+
+html,
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: auto;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  transition: all 0.5s $app-sidebar-transition;
+}
+
+.app-main {
+  position: relative;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  transition: all 0.5s $app-sidebar-transition;
+  padding-top: $header-height;
+
+  &--inner {
+    padding: $layout-spacer $layout-spacer ($layout-spacer / 2);
+    display: flex;
+    flex: 1;
+
+    &__wrapper {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.app-content-sidebar-fixed {
+  min-height: 100vh;
+
+  @include media-breakpoint-up(lg) {
+    padding-left: $sidebar-width;
+  }
+}
+
+.app-main-sidebar-static {
+  display: flex;
+}
+
+.app-content-footer-fixed {
+  padding-bottom: $footer-height;
+  height: auto;
+}

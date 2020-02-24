@@ -1,0 +1,45 @@
+// Core
+
+body {
+  .app-sidebar-header {
+    height: $header-height;
+    width: $sidebar-width;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    padding-left: ($spacer);
+    padding-right: ($spacer);
+    justify-content: space-between;
+    transition: $transition-base;
+
+    .header-logo-wrapper-btn {
+      background: $gray-100;
+      color: $gray-200;
+    }
+  }
+
+
+  .app-sidebar-header-btn {
+    transition: $transition-base;
+    opacity: 1;
+    visibility: visible;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+  .app-sidebar-header-btn-close {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+
+  .app-sidebar-header-btn-mobile {
+    display: none;
+
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
+  }
+}

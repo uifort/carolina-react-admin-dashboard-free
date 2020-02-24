@@ -1,0 +1,50 @@
+//  Core
+
+.app-page-title {
+  margin: (-$layout-spacer) (-$layout-spacer) $layout-spacer;
+  padding: $layout-spacer ($layout-spacer * 3) $layout-spacer $layout-spacer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba($white, .5);
+  transition: $transition-base;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    padding-right: $layout-spacer;
+  }
+  &--heading {
+    padding-right: ($spacer);
+
+    @include media-breakpoint-down(md) {
+      padding-right: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: $display4-size / 1.1;
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+
+  &--description {
+    margin: ($spacer / 2) 0 0;
+    font-size: $font-size-base * 1.1;
+    opacity: .6;
+    font-weight: normal;
+  }
+}
+
+.speedial-wrapper {
+  position: absolute;
+  top: 50%;
+  right: ($spacer);
+  margin-top: -28px;
+
+  .MuiSpeedDial-root {
+    right: 0;
+    position: absolute;
+  }
+}

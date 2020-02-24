@@ -1,0 +1,89 @@
+// Core
+
+body {
+  .app-sidebar-heading {
+    padding: $spacer $spacer ($spacer / 1.1);
+    font-weight: bold;
+    color: $blue;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    white-space: nowrap;
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  }
+
+  // Sidebar menu item
+
+  .app-sidebar-item {
+    display: block;
+    padding: 2px ($spacer) 1px 0;
+  }
+
+  .app-sidebar-button {
+    padding-top: $spacer / 2.4;
+    padding-bottom: $spacer / 2.4;
+    padding-right: ($spacer / 2);
+    justify-content: flex-start;
+    text-transform: none;
+    border-radius: 0 22px 22px 0;
+    font-size: 15px;
+    width: 100%;
+    font-weight: normal;
+    transition: $transition-base;
+    color: $blue;
+    white-space: nowrap;
+
+    &.active,
+    &:hover {
+      color: $primary;
+      background: $gray-300;
+    }
+  }
+
+  .app-sidebar-button-wrapper {
+    padding: 4px 17px;
+    justify-content: flex-start;
+    text-transform: none;
+    width: 100%;
+    border-radius: 3px;
+    transition: $transition-base;
+    font-weight: normal;
+
+    &.depth-0 {
+      font-weight: 500;
+    }
+
+    font-size: 14px;
+    color: $blue;
+
+    &.active,
+    &:hover {
+      background: none;
+      color: $primary;
+    }
+  }
+
+
+  .sidebar-expand-icon {
+    margin-left: auto;
+    height: 16px;
+    width: 16px;
+    opacity: .6;
+    transition: $transition-base;
+  }
+
+  .sidebar-expand-icon-rotate {
+    opacity: .9;
+    transform: rotate(180deg);
+  }
+
+  .menu-item-label {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .active-item {
+    color: $primary;
+    font-weight: 500;
+  }
+}

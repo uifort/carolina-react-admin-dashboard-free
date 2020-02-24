@@ -1,0 +1,45 @@
+//  Core
+
+.sparkline-full-wrapper {
+  overflow: hidden;
+  height: 140px;
+  position: relative;
+
+  &:last-child {
+    margin: 0 -1px -1px;
+    @include border-bottom-radius(inherit);
+  }
+
+  &--sm {
+    height: 100px;
+  }
+
+  &--lg {
+    height: 160px;
+  }
+
+  &--xl {
+    height: 221px;
+  }
+
+  &--xxl {
+    height: 337px;
+  }
+}
+
+// Overlay cards
+
+.card-chart-overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  opacity: .25;
+  z-index: 5;
+}
+
+.card-content-overlay {
+  position: relative;
+  z-index: 6;
+}

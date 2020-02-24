@@ -1,0 +1,65 @@
+//  Core
+body {
+  .app-footer {
+    height: $footer-height;
+    background: $footer-bg;
+    width: 100%;
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    font-size: $font-size-sm;
+
+    &--inner {
+      padding: 0 $layout-spacer;
+      transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+      height: $footer-height;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+
+      @include media-breakpoint-down(lg) {
+        display: block;
+        text-align: center;
+
+        .MuiList-root {
+          justify-content: center;
+
+          .MuiButtonBase-root {
+            text-align: center;
+          }
+        }
+
+        height: auto;
+        padding: ($spacer / 3) ($spacer / 2) ($spacer / 2);
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      display: block;
+      text-align: center;
+
+      .MuiList-root {
+        justify-content: center;
+
+        .MuiButtonBase-root {
+          text-align: center;
+        }
+      }
+
+      height: auto;
+      padding: ($spacer / 3) ($spacer / 2) ($spacer / 2);
+    }
+
+    &:hover {
+      background: $footer-bg !important;
+    }
+
+    @include media-breakpoint-down(lg) {
+      &--second {
+        span:first-child {
+          display: block;
+          margin-bottom: ($spacer / 2);
+        }
+      }
+    }
+  }
+}
